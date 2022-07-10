@@ -38,7 +38,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-vue-multiselect',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
