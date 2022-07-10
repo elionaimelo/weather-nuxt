@@ -6,7 +6,7 @@ export default {
     titleTemplate: '%s - weather-nuxt',
     title: 'weather-nuxt',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-br',
     },
     meta: [
       { charset: 'utf-8' },
@@ -75,6 +75,10 @@ export default {
     },
   },
 
+  publicRuntimeConfig: {
+    unsplashApi: process.env.UNSPLASH_API_KEY,
+    weatherApi: process.env.WEATHER_API_KEY,
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }

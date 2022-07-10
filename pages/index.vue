@@ -55,8 +55,7 @@ export default {
   data() {
     return {
       search: '',
-      api_key: 'BkFVxI3D21KfjesgevaorlUFHZsiZ6XiS44m6Os2jJc',
-      api_key_weather: '77f561d31496c1f946dc19f0bd339ad1',
+
       selectedImages: [],
       searchRules: [
         (v) => !!v || 'Este campo é obrigatório',
@@ -97,7 +96,7 @@ export default {
         await this.$axios
           .get(
             `https://api.unsplash.com/photos/random?query=${this.search.toLowerCase()}&client_id=${
-              this.api_key
+              this.$config.unsplashApi
             }&count=2`
           )
           .then((response) => {
@@ -111,7 +110,7 @@ export default {
         await this.$axios
           .get(
             `https://api.openweathermap.org/data/2.5/weather?q=${this.search.toLowerCase()}&appid=${
-              this.api_key_weather
+              this.$config.weatherApi
             }`
           )
           .then((response) => {
