@@ -121,9 +121,7 @@ export default {
             return entry.name
           })
         })
-        .catch((err) => {
-          console.log(err)
-        })
+        .catch(() => {})
         .finally(() => (this.isLoading = false))
     },
     toggleLoading(timeout) {
@@ -153,9 +151,7 @@ export default {
               this.$store.commit('city/setData', res.data)
               this.toggleLoading(1000)
             })
-            .catch((err) => {
-              console.log(err)
-            })
+            .catch(() => {})
         })
       )
     },
