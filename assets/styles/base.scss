@@ -31,12 +31,12 @@ body {
 .bg-gradient {
   background: #c0c0aa; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to right,
+    to bottom,
     $color1,
     $color2
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to right,
+    to bottom,
     $color1,
     $color2
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

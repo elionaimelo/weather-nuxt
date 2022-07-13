@@ -1,24 +1,19 @@
 export const state = () => ({
   images: [],
-  data: {
-    name: '',
-    sys: {
-      country: '',
-    },
-    main: {
-      temp: 0,
-      temp_max: 0,
-      temp_min: 0,
-    },
-    weather: [{}],
-  },
+  data: [],
 })
+
+export const actions = {
+  async addData({ commit }, data) {
+    await commit('setData', data)
+  },
+}
 
 export const mutations = {
   setCity(state, data) {
     state.images = data
   },
   setData(state, data) {
-    state.data = data
+    state.data.push(data)
   },
 }
